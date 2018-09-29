@@ -9,10 +9,11 @@
 
 <ion-content padding>
 
-  <img class="image" src="assets/imgs/logoPan.jpg"/>
+  <img *ngIf="!image" class="image" src="assets/imgs/logoPan.jpg"/>
+  <img *ngIf="image" (click)="changePicture()" class="image" [src]="image"/>
 
   <br />
-  <button ion-button icon-start block outline>
+  <button (click)="updatePicture()" ion-button icon-start block outline>
     <ion-icon name="md-add"></ion-icon>
     Foto Kegiatan
   </button>

@@ -13,6 +13,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { OutPage } from '../pages/out/out';
 import { OutCreatePage } from '../pages/out-create/out-create';
 import { Autosize } from '../directives/autosize/autosize';
+import { Camera } from '@ionic-native/camera';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { Autosize } from '../directives/autosize/autosize';
   providers: [
     StatusBar,
     SplashScreen,
+    Camera,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
