@@ -1,24 +1,48 @@
-<!--
-  Generated template for the OutCreatePage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>OutCreate</ion-title>
-  </ion-navbar>
+    <ion-navbar color="primary" text-center>
+        <ion-title><span class="Title">PENGELUARAN DANA</span><button ion-button clear class="invisibleButton"></button></ion-title>
+    </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
 
-  <img class="aqiqahImage" src="assets/imgs/logoPan.jpg"/>
+  <img class="image" src="assets/imgs/logoPan.jpg"/>
 
-  <button ion-button icon-start>
+  <br />
+  <button ion-button icon-start block outline>
     <ion-icon name="md-add"></ion-icon>
     Foto Kegiatan
+  </button>
+
+  <ion-item no-lines>
+      <ion-label><span class="Content">Tanggal</span></ion-label>
+      <ion-input type="date" class="Content" [(ngModel)]="myDate" text-right></ion-input>
+  </ion-item>
+
+  <ion-item no-lines>
+    <ion-label fixed><span class="Content">Jumlah</span></ion-label>
+    <ion-input type="number" placeholder="0" text-right></ion-input>
+  </ion-item>
+  
+  <ion-item no-lines>
+    <ion-label><span class="Content">Jenis</span></ion-label>
+    <ion-select [(ngModel)]="paket_kambing1" interface="popover">
+      <ion-option value="paket1">jenis 1</ion-option>
+      <ion-option value="paket2">jenis 2</ion-option>
+      <ion-option value="paket3">jenis 3</ion-option>
+    </ion-select>
+  </ion-item>
+  
+  <ion-item no-lines>
+      <ion-label><span class="Content">Keterangan</span></ion-label>
+      <ion-textarea class="Content"  [(ngModel)]="address" name="address" placeholder="tuliskan keterangan dengan jelas" type="text" #alamat="ngModel" required autosize></ion-textarea>
+  </ion-item>
+  
+  <br />
+  <button ion-button block round color="secondary">
+    SIMPAN
   </button>
 </ion-content>

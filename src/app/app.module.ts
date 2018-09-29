@@ -12,6 +12,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { OutPage } from '../pages/out/out';
 import { OutCreatePage } from '../pages/out-create/out-create';
+import { Autosize } from '../directives/autosize/autosize';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,9 @@ import { OutCreatePage } from '../pages/out-create/out-create';
     HomePage,
     OutPage,
     OutCreatePage,
-    TabsPage
+    TabsPage,
+    
+    Autosize
   ],
   imports: [
     BrowserModule,
