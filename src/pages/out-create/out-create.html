@@ -19,17 +19,18 @@
 
   <ion-item no-lines>
       <ion-label><span class="Content">Tanggal</span></ion-label>
-      <ion-input type="date" class="Content" [(ngModel)]="myDate" text-right></ion-input>
+      <ion-input type="date" class="Content" [(ngModel)]="date" text-right></ion-input>
   </ion-item>
 
   <ion-item no-lines>
     <ion-label fixed><span class="Content">Jumlah</span></ion-label>
-    <ion-input type="number" placeholder="0" text-right></ion-input>
+    <ion-input type="number" placeholder="0" [(ngModel)]="value" text-right></ion-input>
   </ion-item>
+  <p [hidden]="value || submitted == false" style="color: red" text-center><i>Jumlah tidak valid</i></p>
   
   <ion-item no-lines>
     <ion-label><span class="Content">Jenis</span></ion-label>
-    <ion-select [(ngModel)]="paket_kambing1" interface="popover">
+    <ion-select [(ngModel)]="paket" interface="popover">
       <ion-option value="paket1">jenis 1</ion-option>
       <ion-option value="paket2">jenis 2</ion-option>
       <ion-option value="paket3">jenis 3</ion-option>
@@ -38,11 +39,11 @@
   
   <ion-item no-lines>
       <ion-label><span class="Content">Keterangan</span></ion-label>
-      <ion-textarea class="Content"  [(ngModel)]="address" name="address" placeholder="tuliskan keterangan dengan jelas" type="text" #alamat="ngModel" required autosize></ion-textarea>
+      <ion-textarea class="Content" text-right [(ngModel)]="explanation" name="address" placeholder="tuliskan keterangan dengan jelas" type="text" #alamat="ngModel" required autosize></ion-textarea>
   </ion-item>
   
   <br />
-  <button ion-button block round color="secondary">
+  <button ion-button block round color="secondary" (click)="submit()">
     SIMPAN
   </button>
 </ion-content>
