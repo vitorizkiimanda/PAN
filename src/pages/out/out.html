@@ -7,25 +7,274 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content style="background-color: #f5f3f3">
   <ion-fab right bottom>
     <button (click)="gotoOutCreate()" ion-fab color="light"><ion-icon name="md-add"></ion-icon></button>
   </ion-fab>
 
-  <p>list item :</p>
-  <ol>
-    <li>foto kegiatan</li>
-    <li>Tanggal Pengeluaran</li>
-    <li>Jumlah</li>
-    <li>Jenis</li>
-    <li>Keterangan</li>
-  </ol>
+  <div class="card">
+    <div class="headerDay">
+      <ion-grid>
+        <ion-row no-padding>
+          <ion-col col-2 no-padding text-center>
+            <span class="headerDate">29</span>
+          </ion-col>
+          <ion-col col-4 no-padding>
+            <span>Hari ini</span>
+            <br />
+            <span style="color: gray">September 2018</span>
+          </ion-col>
+          <ion-col col-6 no-padding text-right>
+            <span class="headerValue">Rp. 50.000,00</span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
 
-  <p>Note :</p>
-  <ol>
-    <li>bisa di edit mungkin? atau apus? atau dll</li>
-    <li>Icon APps jadi logo PAN</li>
-    <li>kasih default tanggal hari ini</li>
-    <li>placeholder keterngan rata kanan</li>
-  </ol>
+    <div class="item">
+      <ion-grid>
+        <ion-row no-padding>
+          <ion-col col-6 no-padding>
+            <span>Jenis 1</span>
+          </ion-col>
+          <ion-col col-6 no-padding text-right>
+            <span class="headerValue" style="color: firebrick">Rp. 50.000,00</span>
+          </ion-col>
+        </ion-row>
+        <ion-row no-padding>
+          <ion-col col-12 no-padding>
+            <span style="color: gray">keterangan pengeluaran..</span>  
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      
+      <!-- <img class="image" src="assets/imgs/logoPan.jpg"/> -->
+    </div>
+  </div>  
+
+  <div class="card">
+    <div class="headerDay">
+      <ion-grid>
+        <ion-row no-padding>
+          <ion-col col-2 no-padding text-center>
+            <span class="headerDate">28</span>
+          </ion-col>
+          <ion-col col-4 no-padding>
+            <span>Kemarin</span>
+            <br />
+            <span style="color: gray">September 2018</span>
+          </ion-col>
+          <ion-col col-6 no-padding text-right>
+            <span class="headerValue">Rp. 150.000,00</span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+    <div class="item">
+      <ion-grid>
+        <ion-row no-padding>
+          <ion-col col-6 no-padding>
+            <span>Jenis 1</span>
+          </ion-col>
+          <ion-col col-6 no-padding text-right>
+            <span class="headerValue" style="color: firebrick">Rp. 50.000,00</span>
+          </ion-col>
+        </ion-row>
+        <ion-row no-padding>
+          <ion-col col-12 no-padding>
+            <span style="color: gray">keterangan pengeluaran..</span>  
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+    
+    <div class="item">
+      <ion-grid>
+        <ion-row no-padding>
+          <ion-col col-6 no-padding>
+            <span>Jenis 2</span>
+          </ion-col>
+          <ion-col col-6 no-padding text-right>
+            <span class="headerValue" style="color: firebrick">Rp. 100.000,00</span>
+          </ion-col>
+        </ion-row>
+        <ion-row no-padding>
+          <ion-col col-12 no-padding>
+            <span style="color: gray">keterangan pengeluaran..</span>  
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+  
+  <div class="card">
+    <div class="headerDay">
+      <ion-grid>
+        <ion-row no-padding>
+          <ion-col col-2 no-padding text-center>
+            <span class="headerDate">27</span>
+          </ion-col>
+          <ion-col col-4 no-padding>
+            <span>Kamis</span>
+            <br />
+            <span style="color: gray">September 2018</span>
+          </ion-col>
+          <ion-col col-6 no-padding text-right>
+            <span class="headerValue">Rp. 250.000,00</span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+    <div class="item">
+      <ion-grid>
+        <ion-row no-padding>
+          <ion-col col-6 no-padding>
+            <span>Jenis 1</span>
+          </ion-col>
+          <ion-col col-6 no-padding text-right>
+            <span class="headerValue" style="color: firebrick">Rp. 50.000,00</span>
+          </ion-col>
+        </ion-row>
+        <ion-row no-padding>
+          <ion-col col-12 no-padding>
+            <span style="color: gray">keterangan pengeluaran..</span>  
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+    
+    <div class="item">
+      <ion-grid>
+        <ion-row no-padding>
+          <ion-col col-6 no-padding>
+            <span>Jenis 2</span>
+          </ion-col>
+          <ion-col col-6 no-padding text-right>
+            <span class="headerValue" style="color: firebrick">Rp. 100.000,00</span>
+          </ion-col>
+        </ion-row>
+        <ion-row no-padding>
+          <ion-col col-12 no-padding>
+            <span style="color: gray">keterangan pengeluaran..</span>  
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+    
+    <div class="item">
+      <ion-grid>
+        <ion-row no-padding>
+          <ion-col col-6 no-padding>
+            <span>Jenis 3</span>
+          </ion-col>
+          <ion-col col-6 no-padding text-right>
+            <span class="headerValue" style="color: firebrick">Rp. 100.000,00</span>
+          </ion-col>
+        </ion-row>
+        <ion-row no-padding>
+          <ion-col col-12 no-padding>
+            <span style="color: gray">keterangan pengeluaran..</span>  
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+
+
+  <div class="card">
+    <div class="headerDay">
+      <ion-grid>
+        <ion-row no-padding>
+          <ion-col col-2 no-padding text-center>
+            <span class="headerDate">26</span>
+          </ion-col>
+          <ion-col col-4 no-padding>
+            <span>Rabu</span>
+            <br />
+            <span style="color: gray">September 2018</span>
+          </ion-col>
+          <ion-col col-6 no-padding text-right>
+            <span class="headerValue">Rp. 350.000,00</span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+    <div class="item">
+      <ion-grid>
+        <ion-row no-padding>
+          <ion-col col-6 no-padding>
+            <span>Jenis 1</span>
+          </ion-col>
+          <ion-col col-6 no-padding text-right>
+            <span class="headerValue" style="color: firebrick">Rp. 50.000,00</span>
+          </ion-col>
+        </ion-row>
+        <ion-row no-padding>
+          <ion-col col-12 no-padding>
+            <span style="color: gray">keterangan pengeluaran..</span>  
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+    
+    <div class="item">
+      <ion-grid>
+        <ion-row no-padding>
+          <ion-col col-6 no-padding>
+            <span>Jenis 2</span>
+          </ion-col>
+          <ion-col col-6 no-padding text-right>
+            <span class="headerValue" style="color: firebrick">Rp. 100.000,00</span>
+          </ion-col>
+        </ion-row>
+        <ion-row no-padding>
+          <ion-col col-12 no-padding>
+            <span style="color: gray">keterangan pengeluaran..</span>  
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+    
+    <div class="item">
+      <ion-grid>
+        <ion-row no-padding>
+          <ion-col col-6 no-padding>
+            <span>Jenis 3</span>
+          </ion-col>
+          <ion-col col-6 no-padding text-right>
+            <span class="headerValue" style="color: firebrick">Rp. 100.000,00</span>
+          </ion-col>
+        </ion-row>
+        <ion-row no-padding>
+          <ion-col col-12 no-padding>
+            <span style="color: gray">keterangan pengeluaran..</span>  
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+    
+    <div class="item">
+      <ion-grid>
+        <ion-row no-padding>
+          <ion-col col-6 no-padding>
+            <span>Jenis 3</span>
+          </ion-col>
+          <ion-col col-6 no-padding text-right>
+            <span class="headerValue" style="color: firebrick">Rp. 100.000,00</span>
+          </ion-col>
+        </ion-row>
+        <ion-row no-padding>
+          <ion-col col-12 no-padding>
+            <span style="color: gray">keterangan pengeluaran..</span>  
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+
 </ion-content>

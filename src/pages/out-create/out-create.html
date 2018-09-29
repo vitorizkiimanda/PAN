@@ -27,7 +27,7 @@
     <ion-label fixed><span class="Content">Jumlah</span></ion-label>
     <ion-input type="number" placeholder="0" [(ngModel)]="value" text-right></ion-input>
   </ion-item>
-  <p [hidden]="value || submitted == false" style="color: red" text-center><i>Jumlah tidak valid</i></p>
+  <p [hidden]="value >= 10000 || submitted == false" style="color: red" text-center><i>Jumlah tidak valid</i></p>
   
   <ion-item no-lines>
     <ion-label><span class="Content">Jenis</span></ion-label>

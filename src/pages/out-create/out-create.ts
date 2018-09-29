@@ -39,7 +39,7 @@ export class OutCreatePage {
 
   submit(){
     this.submitted = true;
-    if(this.value)
+    if(this.value>=10000)
       this.navCtrl.pop();
   }
 
