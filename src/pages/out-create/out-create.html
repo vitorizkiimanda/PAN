@@ -9,26 +9,28 @@
 
 <ion-content padding>
 
-  <img *ngIf="!image" class="image" src="assets/imgs/logoPan.jpg"/>
-  <img *ngIf="image" (click)="changePicture()" class="image" [src]="image"/>
+  <div text-center>
+    <img *ngIf="!image" (click)="updatePicture()" class="image" src="assets/imgs/stock.jpg"/>
+    <img *ngIf="image" (click)="changePicture()" class="image" [src]="image"/>
+    
+    <img *ngIf="!image" (click)="updatePicture()" class="image" src="assets/imgs/stock.jpg"/>
+    <img *ngIf="image" (click)="changePicture()" class="image" [src]="image"/>
+    
+    <img *ngIf="!image" (click)="updatePicture()" class="image" src="assets/imgs/stock.jpg"/>
+    <img *ngIf="image" (click)="changePicture()" class="image" [src]="image"/>
+  </div>
 
   <br />
-  <button (click)="updatePicture()" ion-button icon-start block outline>
+  <!-- <button (click)="updatePicture()" ion-button icon-start block outline>
     <ion-icon name="md-add"></ion-icon>
     Foto Kegiatan
-  </button>
+  </button> -->
 
   <ion-item no-lines>
       <ion-label><span class="Content">Tanggal</span></ion-label>
       <ion-input type="date" class="Content" [(ngModel)]="date" text-right></ion-input>
   </ion-item>
 
-  <ion-item no-lines>
-    <ion-label fixed><span class="Content">Jumlah</span></ion-label>
-    <ion-input type="number" placeholder="0" [(ngModel)]="value" text-right></ion-input>
-  </ion-item>
-  <p [hidden]="value >= 10000 || submitted == false" style="color: red" text-center><i>Jumlah tidak valid</i></p>
-  
   <ion-item no-lines>
     <ion-label><span class="Content">Jenis</span></ion-label>
     <ion-select [(ngModel)]="paket" interface="popover">
@@ -37,6 +39,25 @@
       <ion-option value="paket3">jenis 3</ion-option>
     </ion-select>
   </ion-item>
+
+  <ion-item no-lines>
+    <ion-label fixed><span class="Content">Jumlah</span></ion-label>
+    <ion-input type="number" placeholder="0" [(ngModel)]="jumlah" required #jumlahStatus="ngModel" text-right></ion-input>
+  </ion-item>
+  <p [hidden]="jumlahStatus.valid || submitted == false" style="color: red" text-center><i>Jumlah tidak valid</i></p>
+  
+  <ion-item no-lines>
+    <ion-label fixed><span class="Content">Satuan</span></ion-label>
+    <ion-input type="text" placeholder="lusin/ton/karung" (ionChange)="regexSatuan(satuan)" [(ngModel)]="satuan" text-right></ion-input>
+  </ion-item>
+  <p [hidden]="satuanStatus == true || submitted == false" style="color: red" text-center><i>Satuan tidak valid</i></p>
+
+  
+  <ion-item no-lines>
+    <ion-label fixed><span class="Content">Nilai (Rp)</span></ion-label>
+    <ion-input type="number" placeholder="0" [(ngModel)]="value" text-right></ion-input>
+  </ion-item>
+  <p [hidden]="value >= 10000 || submitted == false" style="color: red" text-center><i>nilai tidak valid</i></p>
   
   <ion-item no-lines>
       <ion-label><span class="Content">Keterangan</span></ion-label>

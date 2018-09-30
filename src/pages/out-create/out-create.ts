@@ -13,6 +13,9 @@ export class OutCreatePage {
   value:any;
   paket:any;
   explanation:any;
+  satuan:any;
+  jumlah:any;
+  satuanStatus:boolean=false;
 
   submitted : boolean = false;
 
@@ -39,8 +42,19 @@ export class OutCreatePage {
 
   submit(){
     this.submitted = true;
-    if(this.value>=10000)
+    if(this.value>=10000 && this.satuan &&this.jumlah)
       this.navCtrl.pop();
+  }
+
+  
+  regexSatuan(string){
+
+    let regex = /^[A-Za-z]+$/;
+    let dollar = /^$/
+
+    if(regex.test(string) == false && dollar.test(string)) this.satuanStatus = false;
+    else this.satuanStatus = true;
+
   }
 
   
